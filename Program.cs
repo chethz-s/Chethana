@@ -155,6 +155,8 @@ namespace Chethana
             IWebElement switchwin = driver.FindElement(By.Id("openwindow"));
             switchwin.Click();
             Thread.Sleep(3000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+            driver.Close();
             driver.SwitchTo().Window(driver.WindowHandles[0]);
         }
 
@@ -165,6 +167,8 @@ namespace Chethana
             IWebElement switchtab = driver.FindElement(By.Id("opentab"));
             switchtab.Click();
             Thread.Sleep(3000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+            driver.Close();
             driver.SwitchTo().Window(driver.WindowHandles[0]);
         }
 
